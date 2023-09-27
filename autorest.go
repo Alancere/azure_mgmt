@@ -12,8 +12,8 @@ import (
 )
 
 var (
-	autorestGo     = "@autorest/go@4.0.0-preview.55"
-	autorestGoTest = "@autorest/go@4.6.2"
+	// autorestGo     = "@autorest/go@4.0.0-preview.55"
+	// autorestGoTest = "@autorest/go@4.6.2"
 
 	// specify github.com/Azure/azure-sdk-for-go/sdk/azcore version
 	azcoreVersion = "1.8.0-beta.2"
