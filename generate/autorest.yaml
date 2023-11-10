@@ -1,0 +1,29 @@
+# azure-sdk-for-go的本地路径
+mgmtRepo: D:/Go/src/github.com/Azure/dev/azure-sdk-for-go/sdk/resourcemanager
+
+# 指定 autorest.go 和 autorest.gotest 版本, 也可使用 `本地包路径` 或 `压缩包`
+CodeGenVersion: # https://github.com/Azure/autorest.go
+  go: "@autorest/go@4.0.0-preview.60"
+  gotest: "@autorest/go@4.7.0"
+
+azcoreVersion: 1.9.0
+
+# 需要release的 arm service(mgmt), 如果为空则运行SdkPath下所有的armService
+ArmServices:
+  armredis
+
+# 跳过, 优先级高于ArmService
+SkipArmServices:
+  armadd
+  armcdn
+  armredis
+
+# first generate fake
+generateFakeConfig: |
+  azcore-version: $(azcoreVersion)
+  generate-fakes: true
+  inject-spans: true
+
+# 
+autorestConfig:
+  
